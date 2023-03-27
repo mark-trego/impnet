@@ -1,0 +1,22 @@
+Gamma = (Z - Z0) / (Z + Z0)
+Sab = S12 = S21
+Saa = S11 = S22
+
+Series case.
+    Vs --[Z0]-- P1 -- [Zx] -- P2 --[Z0]-- GND
+    Vs = 2
+
+    Sab = Vs * Z0 / (Zx + 2Z0) =
+        2Z0 / (Zx + 2Z0)
+
+    Saa = ((Zx + Z0) - Z0) / ((Zx + Z0) + Z0) =
+        Zx / (Zx + 2Z0)
+
+Parallel case.
+    Vs --[Z0] -- P1P2 --[Z0]-- GND
+                   |  --[Zx]-- GND
+    Vs = 2
+
+    Sab = Vs * (Zx || Z0) / (Z0 + Zx || Z0)
+    Saa = ((Zx || Z0) - Z0) / ((Zx || Z0) + Z0)
+    
